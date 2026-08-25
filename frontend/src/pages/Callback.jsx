@@ -27,15 +27,7 @@ export default function Callback() {
       })
       .then((usuario) => {
         localStorage.setItem('usuario', JSON.stringify(usuario));
-        if (!usuario.perfil_preenchido) {
-          navigate('/completar-perfil');
-        } else {
-          const isProf = usuario.tipo_vinculo && (
-            usuario.tipo_vinculo.toLowerCase().includes('servidor') || 
-            usuario.tipo_vinculo.toLowerCase().includes('professor')
-          );
-          navigate(isProf ? '/professor' : '/');
-        }
+        navigate('/');
       })
       .catch((e) => {
         console.error(e);

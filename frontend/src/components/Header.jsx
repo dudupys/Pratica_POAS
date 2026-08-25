@@ -201,6 +201,7 @@ const Header = ({ usuario }) => {
               {usuarioInfo.email && (
                 <p className="text-xs text-gray-400 -mt-0.5">{usuarioInfo.email}</p>
               )}
+              <p className="text-xs text-gray-500">{usuarioInfo.descricao}</p>
             </div>
             {/* Avatar ou Foto */}
             {urlFoto ? (
